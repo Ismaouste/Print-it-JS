@@ -16,3 +16,12 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+// insert dots at bottom of the banner section (as many as there are slides)
+const dots = document.querySelector('.dots')
+slides.forEach((slide, index) => {
+	dots.insertAdjacentHTML('beforeend', `<span class="dot" data-slide="${index}"></span>`)
+})
+// give active class to first dot
+dots.querySelector('.dot').classList.add('dot_selected')	
+// insert slides
+
